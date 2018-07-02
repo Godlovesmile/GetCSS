@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>pc-nav</title>
+  <style>
+    ul,nav,li,a {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    li {
+      list-style: none;
+    }
+    nav,.nav-submenu-list {
+      background: #25383c;
+      text-align: cneter;
+    }
+    .nav-container-list {
+      /*overflow: hidden;*/
+      max-width: 1280px;
+      margin: 0 auto;
+      background: green;
+    }
+    .nav-list-item {
+      color: white;
+      float: left;
+      width: 25%;
+      width: calc(100% / 4);
+      background: red;
+      text-align: center;
+
+      display: inline-block;
+      position: relative;
+    }
+    .nav-list-item a {
+      display: block;
+      padding: 20px 40px;
+      background: orange;
+    }
+    .nav-submenu-list {
+      display: none;
+      /*background: red;*/
+
+      position: absolute;
+      left: 0;
+      top: 100%;
+    }
+    .nav-list-item:hover>ul {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="nav-container-list">
+      <li class="nav-list-item"><a href="#">item</a></li>
+      <li class="nav-list-item"><a href="#">tudan</a></li>
+      <li class="nav-list-item"><a href="#">I love you</a></li>
+      <li class="nav-list-item">
+        <a href="#">Not so long item</a>
+        <ul class="nav-submenu-list">
+          <li class="nav-submenu-item"><a href="#">subitem1</a></li>
+          <li class="nav-submenu-item"><a href="#">subitem2</a></li>
+          <li class="nav-submenu-item"><a href="#">subitem3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>
